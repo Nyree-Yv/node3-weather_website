@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         } else {
             callback(undefined, body.current.weather_descriptions[0] + ' throughout the day. It is currently ' + body.current.temperature + 
-            ' degrees with a feels-like temperature of ' + body.current.feelslike + ' degrees.')
+            ' degrees with a feels-like temperature of ' + body.current.feelslike + ' degrees' + ' and humidity at ' + body.current.humidity + '%.')
         }
     })
 }
